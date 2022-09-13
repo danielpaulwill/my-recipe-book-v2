@@ -20,7 +20,7 @@ function Navbar({ user, setUser, goToLoginClick }) {
       </div>
       <div className={(user === '') ? 'loggedOut' : 'loggedIn'}>
         <h3>{(user === '') ? "Please log in" : `Hello, ${user.username}`}</h3>
-        <button className="normalButton" onClick={(user === '') ? goToLoginPage : handleLogout}>{(user === '') ? 'Log In' : 'Log Out'}</button>
+        <button className="normalButton" onClick={(user === '') ? goToLoginClick : handleLogout}>{(user === '') ? 'Log In' : 'Log Out'}</button>
       </div>
       <div id="navigation">
         <p>Recipes</p>
