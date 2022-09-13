@@ -1020,3 +1020,26 @@ Processing by UsersController#show as */*
 Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 824)
 
 
+Started GET "/" for ::1 at 2022-09-13 15:17:59 -0400
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/daniel/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/daniel/.rvm/gems/ruby-2.7.4/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.6ms | Allocations: 402)
+Completed 200 OK in 27ms (Views: 15.8ms | Allocations: 3420)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-13 15:17:59 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes" for ::1 at 2022-09-13 15:18:03 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 4.9ms | Allocations: 4009)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-13 15:18:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
