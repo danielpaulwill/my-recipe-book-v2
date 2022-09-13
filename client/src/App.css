@@ -1,38 +1,63 @@
-.App {
+#navbar {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* width: 100vw; */
+  border: solid 3px red;
+}
+
+#logo {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  align-self: center;
+}
+
+.logo1 {
+  margin: auto 0;
+}
+
+#navigation {
+  display: flex;
+  flex-flow: row wrap;
+  align-self: center;
+}
+
+p {
+  padding: 0 15px;
+}
+
+#mainContainer {
+  border:solid 3px blue;
+  width: 75vw;  
+  margin: 0 auto;
+}
+
+#signup {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.loggedIn {
+  color: green;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  margin: auto 10px auto 0;
+  justify-content: right;
 }
 
-.App-link {
-  color: #61dafb;
+.loggedOut {
+  color: red;
+  display: flex;
+  flex-direction: row;
+  margin: auto 10px auto 0;
+  justify-content: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.normalButton {
+  border: 3px solid #000;
+  margin: 15px;
+  cursor: pointer;
 }
+
+
+
