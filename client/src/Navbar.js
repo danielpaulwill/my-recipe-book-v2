@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 
 function Navbar({ user, setUser, goToLoginClick }) {
   let navigate = useNavigate()
@@ -8,10 +8,12 @@ function Navbar({ user, setUser, goToLoginClick }) {
       method: "DELETE" 
     }).then((res) => {
       if (res.ok) {
-        setUser(null);
+        setUser('');
         navigate('/login')
       }});
   }
+
+
 
 
   return (
@@ -24,8 +26,20 @@ function Navbar({ user, setUser, goToLoginClick }) {
         <button className="normalButton" onClick={(user === '') ? goToLoginClick : handleLogout}>{(user === '') ? 'Log In' : 'Log Out'}</button>
       </div>
       <div id="navigation">
-        <p>Recipes</p>
-        <p>My Account</p>
+        {/* <p>Recipes</p> */}
+        <NavLink
+          to="recipes" className='navlinks'
+          // style={({ isActive }) =>
+          //   isActive ? activeStyle : undefined
+          // }
+        >
+          Recipes
+        </NavLink>
+        <NavLink
+          to='MyAccount' className='navlinks'
+        >
+          My Account
+        </NavLink>
       </div>
     </div>
   );

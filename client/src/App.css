@@ -23,8 +23,9 @@
   align-self: center;
 }
 
-p {
+.navlinks {
   padding: 0 15px;
+  border: solid 3px turquoise;
 }
 
 #mainContainer {

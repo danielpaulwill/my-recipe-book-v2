@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login from "./Login";
 import SignUp from "./SignUp";
+import RecipeList from './RecipeList';
 
 function MainContainer({ setUser, goToLoginClick }) {
   let navigate = useNavigate()
@@ -20,13 +21,20 @@ function MainContainer({ setUser, goToLoginClick }) {
         setUser(user)
       });
       navigate('/recipes')
-      alert("You have auto logged in");
+      alert("Welcome back!");
     } else {
-      res.json().then((err) => alert(err.errors))
+      res.json().then((err) => {
+        if (err.errors === undefined){
+          alert("")
+        } else {
+        alert(err.errors)
+      }
+    })
       // navigate('/welcome')
     }});
   }, []);
 
+  // Sign up
   function handleSignupClick(username, password) {
     fetch('/users', {
       method: 'POST',
@@ -49,6 +57,7 @@ function MainContainer({ setUser, goToLoginClick }) {
       }})
   };
 
+  // Log in
   function handleLoginClick(username, password) {
     fetch("/login", {
       method: "POST",
@@ -80,6 +89,7 @@ function MainContainer({ setUser, goToLoginClick }) {
       <Routes>
         <Route path='login' element={<Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />} />
         <Route path='signup' element={<SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />} />
+        <Route path='recipes' element={<RecipeList />} />
       </Routes>
       {/* <h1>MainContainer</h1> */}
       {/* {currentPage} */}
