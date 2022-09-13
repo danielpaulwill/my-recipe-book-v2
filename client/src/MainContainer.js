@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Login from "./Login";
 import SignUp from "./SignUp";
 
-function MainContainer({ setUser }) {
+function MainContainer({ setUser, goToLoginClick }) {
   // const [errors, setErrors] = useState()
   
   const login = <Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />
@@ -41,18 +41,30 @@ function MainContainer({ setUser }) {
         res.json().then((data) => setUser(data));
         // navigate('/game/setup')
         // window.scrollTo(0, 0);
-        setCurrentPage()
+        // setCurrentPage()
       } else {
         res.json().then((err) => alert(err.errors))
       }})
   };
 
-  function handleLoginClick() {
-
-  }
-
-  function goToLoginClick() {
-    setCurrentPage(login)
+  function handleLoginClick(username, password) {
+    fetch("/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ username, password }),
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((user) => {
+          setUser(user)
+        });
+        // navigate('/game/play')
+        // window.scrollTo(0, 0);
+      } else {
+        res.json().then((err) => alert(err.errors))
+      }
+    });
   }
 
   function goToSignupClick() {

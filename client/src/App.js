@@ -8,10 +8,15 @@ function App() {
   const [user, setUser] = useState('')
     // let navigate = useNavigate()
 
+  function goToLoginClick() {
+    setCurrentPage(login)
+  }
+  
+
   return (
     <div className="App">
-            <Navbar user={user} />
-            <MainContainer setUser={setUser} />
+            <Navbar user={user} setUser={setUser} goToLoginClick={goToLoginClick} />
+            <MainContainer setUser={setUser} goToLoginClick={goToLoginClick} />
 
     </div>
   );
