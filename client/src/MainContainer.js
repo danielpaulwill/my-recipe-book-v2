@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login from "./Login";
 import SignUp from "./SignUp";
 
 function MainContainer({ setUser, goToLoginClick }) {
+  let navigate = useNavigate()
   // const [errors, setErrors] = useState()
   
-  const login = <Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />
-  const signUp = <SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />
+  // const login = <Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />
+  // const signUp = <SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />
 
-  const [currentPage, setCurrentPage] = useState(signUp)
+  // const [currentPage, setCurrentPage] = useState(signUp)
 
   // Auto-login
   useEffect(() => {
@@ -68,14 +70,18 @@ function MainContainer({ setUser, goToLoginClick }) {
   }
 
   function goToSignupClick() {
-    setCurrentPage(signUp)
+    navigate('/signup')
   }
 
 
   return (
     <div id='mainContainer'>
+      <Routes>
+        <Route path='login' element={<Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />} />
+        <Route path='signup' element={<SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />} />
+      </Routes>
       {/* <h1>MainContainer</h1> */}
-      {currentPage}
+      {/* {currentPage} */}
     </div>
   );
 }

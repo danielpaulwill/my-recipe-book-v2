@@ -10,7 +10,7 @@ function App() {
     let navigate = useNavigate()
 
   function goToLoginClick() {
-    // setCurrentPage(login)
+    navigate('/login')
   }
   
 
