@@ -19,7 +19,7 @@ function MainContainer({ setUser, goToLoginClick }) {
       res.json().then((user) => {
         setUser(user)
       });
-      // navigate('/game/play')
+      navigate('/recipes')
       alert("You have auto logged in");
     } else {
       res.json().then((err) => alert(err.errors))
@@ -60,6 +60,7 @@ function MainContainer({ setUser, goToLoginClick }) {
       if (res.ok) {
         res.json().then((user) => {
           setUser(user)
+          navigate('/recipes')
         });
         // navigate('/game/play')
         // window.scrollTo(0, 0);

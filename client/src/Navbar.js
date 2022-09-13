@@ -1,6 +1,7 @@
-
+import { useNavigate } from 'react-router-dom'
 
 function Navbar({ user, setUser, goToLoginClick }) {
+  let navigate = useNavigate()
 
   function handleLogout() {
     fetch("/logout", {
@@ -8,7 +9,7 @@ function Navbar({ user, setUser, goToLoginClick }) {
     }).then((res) => {
       if (res.ok) {
         setUser(null);
-        // navigate('/login')
+        navigate('/login')
       }});
   }
 
@@ -16,7 +17,7 @@ function Navbar({ user, setUser, goToLoginClick }) {
   return (
     <div id="navbar">
       <div id="logo">
-        <h2 className="logo1">my</h2><h1>RECIPE</h1><h2 className="logo1">book</h2>
+        <h2 className="logo1" style={{ color: '#B3531b' }}>my</h2><h1 style={{ color: '#E0190e' }}>RECIPE</h1><h2 className="logo1" style={{ color: '#B3531b' }}>book</h2>
       </div>
       <div className={(user === '') ? 'loggedOut' : 'loggedIn'}>
         <h3>{(user === '') ? "Please log in" : `Hello, ${user.username}`}</h3>

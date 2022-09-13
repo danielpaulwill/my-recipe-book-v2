@@ -12,13 +12,13 @@ class SessionsController < ApplicationController
 
   def destroy
     user = User.find_by(id: session[:user_id])
+    # byebug
     if user
       session.destroy
       render json: [], status: :no_content
     else
-      # user = User.first
       render json: { errors: user.errors.full_messages }, status: :unauthorized
     end
   end
-  
+
 end
