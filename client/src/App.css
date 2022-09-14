@@ -60,5 +60,17 @@
   cursor: pointer;
 }
 
+.recipeCard {
+  border: solid 3px red;
+  width: 24vw;
+  text-align: center;
+  /* display: flex;
+  flex-direction: column; */
+}
 
+.recipeCardContainer {
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+}
 

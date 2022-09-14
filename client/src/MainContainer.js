@@ -49,9 +49,7 @@ function MainContainer({ setUser, goToLoginClick }) {
     .then((res) => {
       if (res.ok) {
         res.json().then((data) => setUser(data));
-        // navigate('/game/setup')
-        // window.scrollTo(0, 0);
-        // setCurrentPage()
+        navigate('/recipes')
       } else {
         res.json().then((err) => alert(err.errors))
       }})
