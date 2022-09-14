@@ -16,6 +16,9 @@ puts "Seeding data..."
 # end
 
 recipe1 = Recipe.create(photo: 'https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png', title: 'Baked Good One', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien.', ingredients: 'Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five', instructions: 'Bake it', category: 'Baked Goods')
+recipe1.reviews.create(user_id: 1, recipe_id: recipe1.id, review_text: "This recipe was bad")
+
+
 recipe2 = Recipe.create(photo: 'https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png', title: 'Baked Good Two', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien.', ingredients: 'Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five', instructions: 'Bake it', category: 'Baked Goods')
 recipe3 = Recipe.create(photo: 'https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png', title: 'Baked Good Three', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien.', ingredients: 'Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five', instructions: 'Bake it', category: 'Baked Goods')
 

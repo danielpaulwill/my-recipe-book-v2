@@ -19,6 +19,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    users = User.all
+    render json: users
+  end
+
 
 
   private
@@ -27,5 +32,5 @@ class UsersController < ApplicationController
   def user_params
     params.permit(:username, :password, :password_digest)
   end
-  
+
 end
