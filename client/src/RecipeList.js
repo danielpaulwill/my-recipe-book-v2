@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react'
 import Recipe from './Recipe'
 
 function RecipeList() {
-  const [recipes, setRecipes] = useState()
-  const [allRecipes, setAllRecipes] = useState()
-  
+  const [recipes, setRecipes] = useState()  
   
   useEffect(() => {
     fetch("/recipes").then((res) => {
@@ -20,12 +18,6 @@ function RecipeList() {
     }, []);
     
     let theRecipes = recipes?.map(recipe => <Recipe recipe={recipe} />)
-    // useEffect(() => {
-    //   if (recipes !== null) {
-    //     setAllRecipes(theRecipes) 
-    //   }
-    // }, [recipes])
-
     
     return (
       <div>

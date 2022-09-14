@@ -3,8 +3,9 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import Login from "./Login";
 import SignUp from "./SignUp";
 import RecipeList from './RecipeList';
+import MyAccount from './MyAccount';
 
-function MainContainer({ setUser, goToLoginClick }) {
+function MainContainer({ setUser, user, goToLoginClick }) {
   let navigate = useNavigate()
   // const [errors, setErrors] = useState()
   
@@ -29,9 +30,7 @@ function MainContainer({ setUser, goToLoginClick }) {
         } else {
         alert(err.errors)
       }
-    })
-      // navigate('/welcome')
-    }});
+    })}});
   }, []);
 
   // Sign up
@@ -88,9 +87,8 @@ function MainContainer({ setUser, goToLoginClick }) {
         <Route path='login' element={<Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />} />
         <Route path='signup' element={<SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />} />
         <Route path='recipes' element={<RecipeList />} />
+        <Route path='account' element={<MyAccount user={user} />} />
       </Routes>
-      {/* <h1>MainContainer</h1> */}
-      {/* {currentPage} */}
     </div>
   );
 }

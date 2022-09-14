@@ -36,7 +36,7 @@ function Navbar({ user, setUser, goToLoginClick }) {
           Recipes
         </NavLink>
         <NavLink
-          to='MyAccount' className='navlinks'
+          to='account' className='navlinks'
         >
           My Account
         </NavLink>
