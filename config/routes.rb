@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :reviews
   resources :recipes, only: [:create, :index]
   resources :users, only: [:create, :show]
   get '/me', to: 'users#show'
