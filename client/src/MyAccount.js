@@ -1,28 +1,19 @@
 import { useEffect, useState } from 'react';
 
 function MyAccount({ user }) {
-  const [review, setReview] = useState()
+  const [reviews, setReviews] = useState()
 
-  // useEffect(() => {
-  //   fetch(`/users/${user.id}`).then((res) => {
-  //     if (res.ok) {
-  //     res.json().then((user) => {
-  //       setUser(user)
-  //     });
-  //     navigate('/recipes')
-  //     alert("Welcome back!");
-  //   } else {
-  //     res.json().then((err) => {
-  //       if (err.errors === undefined){
-  //         alert("")
-  //       } else {
-  //       alert(err.errors)
-  //     }
-  //   })}});
-  // }, []);
+  useEffect(() => {
+    fetch(`/reviews/${user.id}`).then((res) => {
+      if (res.ok) {
+      res.json().then((res) => {
+        setReviews(res)
+      });
+    }});
+  }, []);
 
 
-  // let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} />)
+  let userReviews = reviews?.map(review => <Review key={review.id} review={review} />)
 
 
   return (

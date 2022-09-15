@@ -2641,3 +2641,8 @@ Processing by RecipesController#index as */*
 Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.6ms | Allocations: 2609)
 
 
+Started GET "/reviews/1" for 127.0.0.1 at 2022-09-15 11:51:22 -0400
+Processing by ReviewsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:13:in `show'
