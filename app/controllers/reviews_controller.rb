@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
     user = User.find_by(id: session[:user_id])
     reviews = user.reviews.all
     # byebug
-    render json: reviews, include: :recipes
+    render json: reviews
   end
 
   def index
