@@ -10,10 +10,14 @@ class ReviewsController < ApplicationController
   end
 
   def show
-    user = User.find_by(id: session[:user_id])
-    reviews = user.reviews.all
+    user = User.find_by(id: 1)
+    @reviews
+    user.reviews.each do |review|
+      @reviews << {review, review.recipe}
+    end
+    # reviews = user.reviews.all
     # byebug
-    render json: reviews
+    render json: @reviews
   end
 
   def index
