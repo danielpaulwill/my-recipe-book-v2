@@ -17,7 +17,7 @@ function RecipeList() {
       }});
     }, []);
     
-    let theRecipes = recipes?.map(recipe => <Recipe recipe={recipe} />)
+    let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} />)
     
     return (
       <div>

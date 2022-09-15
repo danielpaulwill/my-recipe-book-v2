@@ -7,7 +7,10 @@ import MainContainer from './MainContainer';
 
 function App() {
   const [user, setUser] = useState('')
-    let navigate = useNavigate()
+  
+  let navigate = useNavigate()
+
+  console.log({ user })
 
   function goToLoginClick() {
     navigate('/login')

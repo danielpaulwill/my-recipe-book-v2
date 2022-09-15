@@ -15,6 +15,9 @@ puts "Seeding data..."
 #   # end
 # end
 
+user1 = User.create(username: 'Test1', password: 'Pass1')
+user2 = User.create(username: 'Test2', password: 'Pass2')
+
 recipe1 = Recipe.create(photo: 'https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png', title: 'Baked Good One', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien.', ingredients: 'Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five', instructions: 'Bake it', category: 'Baked Goods')
 recipe1.reviews.create(user_id: 1, recipe_id: recipe1.id, review_text: "This recipe was bad")
 
