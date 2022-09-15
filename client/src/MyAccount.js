@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-function Recipe({ user }) {
-
+function MyAccount({ user }) {
+  const [review, setReview] = useState()
 
   // useEffect(() => {
   //   fetch(`/users/${user.id}`).then((res) => {
@@ -21,12 +21,17 @@ function Recipe({ user }) {
   //   })}});
   // }, []);
 
+
+  // let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} />)
+
+
   return (
     <div>
       <h4>Username:<br></br>{user.username}</h4>
-      <h4></h4>
+      <h4>Reviews</h4>
+      
     </div>
   );
 }
 
-export default Recipe;
+export default MyAccount;
