@@ -14,9 +14,9 @@ class ReviewsController < ApplicationController
     render json: reviews
   end
 
-  # def show
-  #   review = Review.find_by(id: params[:id])
-  #   render json: review
-  # end
+  def show
+    review = Review.find_by(id: params[:id])
+    render json: review
+  end
 
 end

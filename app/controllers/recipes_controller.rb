@@ -3,15 +3,15 @@ class RecipesController < ApplicationController
   def create
     recipe = Recipe.create(photo: params[:photo], title: params[:title], description: params[:description], ingredients: params[:ingredients], instructions: params[:instructions], category: params[:category])
     if recipe.valid?
-      render json: character, status: :created
+      render json: recipe, status: :created
     else
-      render json: { errors: character.errors.full_messages }, status: :unprocessable_entity
+      render json: { errors: recipe.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
   def index
     recipes = Recipe.all
-    render json: recipes, include: :reviews, status: :ok
+    render json: recipes, status: :ok
   end
 
   def show
