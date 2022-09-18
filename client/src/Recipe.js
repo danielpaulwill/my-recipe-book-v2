@@ -4,7 +4,7 @@ function Recipe({ recipe }) {
   return (
     <div className="recipeCard">
       <h3>{recipe.title}</h3>
-      <img className="recipeImage" src={recipe.photo} />
+      <img className="recipeImage" src={recipe.photo} alt="A yummy recipe" />
       <p><b>Category:</b> {recipe.category}</p>
       <p><b>Ingredients List:</b> {recipe.ingredients}</p>
       <p><b>Instructions:</b> {recipe.instructions}</p>

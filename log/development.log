@@ -4674,3 +4674,654 @@ Processing by RecipesController#show as */*
 Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 2.3ms | Allocations: 4859)
 
 
+Started GET "/me" for 127.0.0.1 at 2022-09-18 07:41:28 -0400
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:41:28 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by RecipesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.74ms)
+Completed 200 OK in 65ms (Views: 10.1ms | ActiveRecord: 12.3ms | Allocations: 11394)
+
+
+  [1m[36mRecipe Load (3.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.48ms)
+Completed 200 OK in 156ms (Views: 42.2ms | ActiveRecord: 108.3ms | Allocations: 16877)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-18 07:42:02 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 3.1ms | Allocations: 6327)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-18 07:42:12 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.29ms)
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 3.2ms | Allocations: 4858)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-18 07:42:22 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (1.5ms)
+Completed 200 OK in 15ms (Views: 4.3ms | ActiveRecord: 2.9ms | Allocations: 4851)
+
+
+Started GET "/reviews/1" for 127.0.0.1 at 2022-09-18 07:43:11 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReviewsController
+Did you mean?  create
+               index):
+  
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:43:12 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.05ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 2644)
+
+
+Started GET "/reviews/1" for 127.0.0.1 at 2022-09-18 07:43:15 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReviewsController
+Did you mean?  create
+               index):
+  
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:43:18 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.65ms)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.4ms | Allocations: 2622)
+
+
+Started GET "/reviews/1" for 127.0.0.1 at 2022-09-18 07:43:20 -0400
+  
+AbstractController::ActionNotFound (The action 'show' could not be found for ReviewsController
+Did you mean?  create
+               index):
+  
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:43:24 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (8.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.4ms)
+Completed 200 OK in 15ms (Views: 5.7ms | ActiveRecord: 8.8ms | Allocations: 2622)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:44:57 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 07:44:57 -0400
+Processing by UsersController#show as */*
+Processing by RecipesController#index as */*
+Completed 204 No Content in 2ms (ActiveRecord: 0.0ms | Allocations: 1125)
+
+
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 34ms (Views: 1.1ms | ActiveRecord: 18.3ms | Allocations: 6786)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:45:08 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 07:45:08 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (5.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (13.75ms)
+Completed 200 OK in 90ms (Views: 32.5ms | ActiveRecord: 53.8ms | Allocations: 7870)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 60ms (Views: 1.9ms | ActiveRecord: 12.0ms | Allocations: 5090)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 07:45:35 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 07:45:35 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (4.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.9ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 10.0ms | Allocations: 7869)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.26ms)
+Completed 200 OK in 14ms (Views: 1.0ms | ActiveRecord: 2.5ms | Allocations: 5125)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:11:29 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:11:29 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.61ms)
+Completed 200 OK in 35ms (Views: 28.7ms | ActiveRecord: 3.3ms | Allocations: 9834)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.56ms)
+Completed 200 OK in 93ms (Views: 2.9ms | ActiveRecord: 42.3ms | Allocations: 21439)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:11:57 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:11:57 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.89ms)
+Completed 200 OK in 85ms (Views: 47.4ms | ActiveRecord: 30.8ms | Allocations: 7914)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 17ms (Views: 1.4ms | ActiveRecord: 4.3ms | Allocations: 5130)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:13:24 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:13:24 -0400
+Processing by RecipesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (2.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 200 OK in 39ms (Views: 24.1ms | ActiveRecord: 7.8ms | Allocations: 10802)
+
+
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 48ms (Views: 1.4ms | ActiveRecord: 15.8ms | Allocations: 11827)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (87.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_development"[0m
+  [1m[35m (55.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "react_rails_api_project_template_test"[0m
+  [1m[35m (195.5ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_development" ENCODING = 'unicode'[0m
+  [1m[35m (74.0ms)[0m  [1m[35mCREATE DATABASE "react_rails_api_project_template_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "photo" character varying, "title" character varying, "description" character varying, "ingredients" character varying, "instructions" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" integer, "recipe_id" integer, "review_text" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220914021045)[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220913030919),
+(20220913172708);
+
+[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-18 13:13:52.804252"], ["updated_at", "2022-09-18 13:13:52.804252"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b4bc4972212a3499160d33c374a324441d348db1"], ["created_at", "2022-09-18 13:13:52.817753"], ["updated_at", "2022-09-18 13:13:52.817753"]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "recipes" CASCADE[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE TABLE "recipes" ("id" bigserial primary key, "photo" character varying, "title" character varying, "description" character varying, "ingredients" character varying, "instructions" character varying, "category" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "reviews" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "reviews" ("id" bigserial primary key, "user_id" integer, "recipe_id" integer, "review_text" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying, "password" character varying, "password_digest" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20220914021045)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20220913030919),
+(20220913172708);
+
+[0m
+  [1m[35m (5.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-18 13:13:52.956177"], ["updated_at", "2022-09-18 13:13:52.956177"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (1.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2022-09-18 13:13:52.963863"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "b4bc4972212a3499160d33c374a324441d348db1"], ["created_at", "2022-09-18 13:13:52.976055"], ["updated_at", "2022-09-18 13:13:52.976055"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test1"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Test1"], ["password_digest", "$2a$12$SyZ8E5SKXvatXVPf10Ega.YVunqmzXxZeS1LI3g9W6o2l2SxEA4Ey"], ["created_at", "2022-09-18 13:13:53.268915"], ["updated_at", "2022-09-18 13:13:53.268915"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Test2"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Test2"], ["password_digest", "$2a$12$IfpmMCqc5.t915AKBkGL9O4Al/cZSOBfkqTZZk3c3ERQzVYOxMOjK"], ["created_at", "2022-09-18 13:13:53.491590"], ["updated_at", "2022-09-18 13:13:53.491590"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.5ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Baked Good One"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Bake it"], ["category", "Baked Goods"], ["created_at", "2022-09-18 13:13:53.504067"], ["updated_at", "2022-09-18 13:13:53.504067"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Create (6.0ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "recipe_id", "review_text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["recipe_id", 1], ["review_text", "This recipe was bad"], ["created_at", "2022-09-18 13:13:53.529704"], ["updated_at", "2022-09-18 13:13:53.529704"]]
+  [1m[36mTRANSACTION (11.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Create (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "recipe_id", "review_text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["recipe_id", 1], ["review_text", "This recipe was good"], ["created_at", "2022-09-18 13:13:53.553205"], ["updated_at", "2022-09-18 13:13:53.553205"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Baked Good Two"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Bake it"], ["category", "Baked Goods"], ["created_at", "2022-09-18 13:13:53.555962"], ["updated_at", "2022-09-18 13:13:53.555962"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Baked Good Three"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Bake it"], ["category", "Baked Goods"], ["created_at", "2022-09-18 13:13:53.559257"], ["updated_at", "2022-09-18 13:13:53.559257"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.3ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Drink One"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Mix it"], ["category", "Drinks"], ["created_at", "2022-09-18 13:13:53.562408"], ["updated_at", "2022-09-18 13:13:53.562408"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Drink Two"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Mix it"], ["category", "Drinks"], ["created_at", "2022-09-18 13:13:53.565634"], ["updated_at", "2022-09-18 13:13:53.565634"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "recipe_id", "review_text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["recipe_id", 5], ["review_text", "This recipe was bad"], ["created_at", "2022-09-18 13:13:53.571417"], ["updated_at", "2022-09-18 13:13:53.571417"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Create (0.2ms)[0m  [1m[32mINSERT INTO "reviews" ("user_id", "recipe_id", "review_text", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 1], ["recipe_id", 5], ["review_text", "This recipe was good"], ["created_at", "2022-09-18 13:13:53.576642"], ["updated_at", "2022-09-18 13:13:53.576642"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Drink Three"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Mix it"], ["category", "Drinks"], ["created_at", "2022-09-18 13:13:53.579255"], ["updated_at", "2022-09-18 13:13:53.579255"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Entree One"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Cook it"], ["category", "Entrees"], ["created_at", "2022-09-18 13:13:53.582714"], ["updated_at", "2022-09-18 13:13:53.582714"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Entree Two"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Cook it"], ["category", "Entrees"], ["created_at", "2022-09-18 13:13:53.585759"], ["updated_at", "2022-09-18 13:13:53.585759"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Entree Three"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three, Ingredient Four, Ingredient Five"], ["instructions", "Cook it"], ["category", "Entrees"], ["created_at", "2022-09-18 13:13:53.588812"], ["updated_at", "2022-09-18 13:13:53.588812"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Side One"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Cook it"], ["category", "Sides"], ["created_at", "2022-09-18 13:13:53.592032"], ["updated_at", "2022-09-18 13:13:53.592032"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Side Two"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Cook it"], ["category", "Sides"], ["created_at", "2022-09-18 13:13:53.595446"], ["updated_at", "2022-09-18 13:13:53.595446"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRecipe Create (0.2ms)[0m  [1m[32mINSERT INTO "recipes" ("photo", "title", "description", "ingredients", "instructions", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["photo", "https://southernword.org/wp-content/uploads/2018/01/placeholder-300x300.png"], ["title", "Side Three"], ["description", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lobortis sollicitudin mauris, in accumsan eros venenatis vitae. Donec sed consectetur augue, quis varius enim. Duis eleifend eget lorem a varius. Vivamus justo libero, rutrum id vulputate in, condimentum in sapien."], ["ingredients", "Ingredient One, Ingredient Two, Ingredient Three"], ["instructions", "Cook it"], ["category", "Sides"], ["created_at", "2022-09-18 13:13:53.598942"], ["updated_at", "2022-09-18 13:13:53.598942"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:14:09 -0400
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:14:09 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by RecipesController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 34ms (Views: 4.3ms | ActiveRecord: 7.3ms | Allocations: 11455)
+
+
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.5ms)
+Completed 200 OK in 56ms (Views: 31.6ms | ActiveRecord: 21.7ms | Allocations: 16942)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:14:12 -0400
+Processing by RecipesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:14:12 -0400
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.27ms)
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 63ms (Views: 61.7ms | ActiveRecord: 0.8ms | Allocations: 4063)
+
+
+Completed 200 OK in 40ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 3392)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:14:32 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:14:33 -0400
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for RecipesController
+Did you mean?  create
+               show):
+  
+actionpack (6.1.3.2) lib/abstract_controller/base.rb:160:in `process'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.3.2) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.3.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.3.2) lib/action_dispatch/routing/route_set.rb:842:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+activerecord (6.1.3.2) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.3.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.3.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+railties (6.1.3.2) lib/rails/engine.rb:539:in `call'
+puma (5.3.2) lib/puma/configuration.rb:249:in `call'
+puma (5.3.2) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.3.2) lib/puma/thread_pool.rb:338:in `with_force_shutdown'
+puma (5.3.2) lib/puma/request.rb:76:in `handle_request'
+puma (5.3.2) lib/puma/server.rb:438:in `process_client'
+puma (5.3.2) lib/puma/thread_pool.rb:145:in `block in spawn_thread'
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.75ms)
+Completed 200 OK in 20ms (Views: 2.5ms | ActiveRecord: 6.0ms | Allocations: 5144)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:15:15 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:15:15 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.87ms)
+Completed 200 OK in 45ms (Views: 37.8ms | ActiveRecord: 3.1ms | Allocations: 7874)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 11ms (Views: 1.0ms | ActiveRecord: 2.6ms | Allocations: 5094)
+
+
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-09-18 09:16:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:16:19 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:16:19 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 10ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1368)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.61ms)
+Completed 200 OK in 50ms (Views: 26.4ms | ActiveRecord: 21.0ms | Allocations: 9460)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:17:55 -0400
+Processing by RecipesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:17:55 -0400
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (58.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.54ms)
+Completed 200 OK in 78ms (Views: 18.8ms | ActiveRecord: 58.9ms | Allocations: 3444)
+
+
+  [1m[36mUser Load (40.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 99ms (Views: 0.9ms | ActiveRecord: 40.5ms | Allocations: 3589)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:18:18 -0400
+Processing by RecipesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:18:18 -0400
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (39.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.54ms)
+Completed 200 OK in 128ms (Views: 88.5ms | ActiveRecord: 39.4ms | Allocations: 3430)
+
+
+  [1m[36mUser Load (52.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 200 OK in 137ms (Views: 0.7ms | ActiveRecord: 52.9ms | Allocations: 3564)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:20:09 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:20:09 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.24ms)
+Completed 200 OK in 22ms (Views: 15.8ms | ActiveRecord: 2.6ms | Allocations: 7889)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.62ms)
+Completed 200 OK in 47ms (Views: 1.8ms | ActiveRecord: 14.8ms | Allocations: 5087)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1087325618115650655)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1087325618115650655)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:24:39 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:24:39 -0400
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (2.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.81ms)
+Completed 200 OK in 39ms (Views: 28.6ms | ActiveRecord: 6.2ms | Allocations: 9821)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 197ms (Views: 2.5ms | ActiveRecord: 145.9ms | Allocations: 21334)
+
+
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["recipe_id", 1], ["LIMIT", 11]]
+Started GET "/recipes" for 127.0.0.1 at 2022-09-18 09:25:46 -0400
+Processing by RecipesController#index as */*
+Started GET "/me" for 127.0.0.1 at 2022-09-18 09:25:46 -0400
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (5.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.67ms)
+Completed 200 OK in 108ms (Views: 102.2ms | ActiveRecord: 5.2ms | Allocations: 3520)
+
+
+  [1m[36mUser Load (11.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.17ms)
+Completed 200 OK in 102ms (Views: 0.5ms | ActiveRecord: 15.4ms | Allocations: 3622)
+
+
