@@ -9,17 +9,6 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def show
-    user = User.find_by(id: 1)
-    @reviews
-    user.reviews.each do |review|
-      @reviews << {review, review.recipe}
-    end
-    # reviews = user.reviews.all
-    # byebug
-    render json: @reviews
-  end
-
   def index
     reviews = Review.all
     render json: reviews

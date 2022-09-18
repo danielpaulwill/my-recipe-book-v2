@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import Recipe from './Recipe'
 
 function RecipeList() {
-  const [recipes, setRecipes] = useState()  
+  const [recipes, setRecipes] = useState()
+
+  console.log({ recipes })
   
   useEffect(() => {
     fetch("/recipes").then((res) => {
