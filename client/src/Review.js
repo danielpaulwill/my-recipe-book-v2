@@ -14,8 +14,8 @@ function Review({ review }) {
 
   return (
     <div className="recipeCard">
-      <h3>Recipe: {review.recipe_id}</h3>
-      <h4>{review.review_text}</h4>
+      <h3>Recipe: {review.recipe.title}</h3>
+      <h4>Review: {review.review_text}</h4>
       {/* <h3>{review.title}</h3>
       <img className="recipeImage" src={review.photo} />
       <p><b>Category:</b> {review.category}</p>
