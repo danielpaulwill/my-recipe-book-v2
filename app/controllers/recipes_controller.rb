@@ -11,15 +11,20 @@ class RecipesController < ApplicationController
 
   def index
     recipes = Recipe.all
-    render json: recipes, include: :reviews
+    render json: recipes, include: :reviews, status: :ok
   end
 
   def show
-    # user = User.find_by(id: 1)
-    recipe = Recipe.first
+    recipe = Recipe.find_by(id: params[:id])
     reviews = recipe.reviews
-    # recipes = user.reviews.each do |review|
-    # reviews = recipe.reviews
+    # byebug
+    # nested = recipe.reviews.each do |review|
+    #   recipe, review
+    # end
+    # reviews = recipe.reviews.all
+    # results = recipe + reviews
+
+    # if recipe
     render json: recipe, include: :reviews
   end
 

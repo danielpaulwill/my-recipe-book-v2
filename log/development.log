@@ -4000,3 +4000,677 @@ Processing by RecipesController#show as */*
 Completed 200 OK in 13ms (Views: 1.5ms | ActiveRecord: 3.3ms | Allocations: 4881)
 
 
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:05:58 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+Completed 204 No Content in 17709ms (ActiveRecord: 1.1ms | Allocations: 39948)
+
+
+Started GET "/recipes/69" for ::1 at 2022-09-17 22:06:25 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"69", "recipe"=>{}}
+Completed 204 No Content in 9747ms (ActiveRecord: 0.0ms | Allocations: 3218)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:07:39 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (2.5ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 14ms (Views: 2.1ms | ActiveRecord: 4.6ms | Allocations: 4349)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:07:48 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"2", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.5ms)
+Completed 200 OK in 4ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 733)
+
+
+Started GET "/recipes/9" for ::1 at 2022-09-17 22:07:55 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"9", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.22ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 733)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:11:22 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected tLABEL, expecting '='
+      r, include: :reviews
+         ^~~~~~~~
+):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected tLABEL, expecting '='
+app/controllers/recipes_controller.rb:22: syntax error, unexpected tLABEL, expecting '='
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:11:44 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 8.2ms | Allocations: 6185)
+
+
+  
+NoMethodError (undefined method `each' for #<Recipe:0x00007fe7cdd2a160>):
+  
+app/controllers/recipes_controller.rb:21:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:11:59 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 3.7ms | Allocations: 6179)
+
+
+  
+NoMethodError (undefined method `each' for #<Recipe:0x00007fe7ca3ef508>):
+  
+app/controllers/recipes_controller.rb:21:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:12:38 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:30: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:30: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:30: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:12:52 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 3.4ms | Allocations: 6182)
+
+
+  
+NoMethodError (undefined method `each' for #<Recipe:0x00007fe7ce26f148>):
+  
+app/controllers/recipes_controller.rb:21:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:13:31 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:29:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 22ms (Views: 6.8ms | ActiveRecord: 5.4ms | Allocations: 8183)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:13:46 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.48ms)
+Completed 200 OK in 12ms (Views: 2.2ms | ActiveRecord: 3.1ms | Allocations: 5389)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:13:53 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:19:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 13ms (Views: 1.2ms | ActiveRecord: 4.1ms | Allocations: 5375)
+
+
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["recipe_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["recipe_id", 1], ["LIMIT", 11]]
+Started GET "/me" for 127.0.0.1 at 2022-09-17 22:18:22 -0400
+Processing by UsersController#show as */*
+Started GET "/recipes" for 127.0.0.1 at 2022-09-17 22:18:22 -0400
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 69ms (Views: 2.1ms | ActiveRecord: 14.2ms | Allocations: 5142)
+
+
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 34ms (Views: 24.5ms | ActiveRecord: 7.4ms | Allocations: 7909)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:20:14 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 822)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:20:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:20:19 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 726)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:20:19 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:20:21 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 726)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:20:21 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:20:23 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.1ms | Allocations: 726)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:20:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:21:08 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 11ms (ActiveRecord: 2.2ms | Allocations: 5501)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:21:09 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 465)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:21:28 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 465)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:21:34 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 2ms (ActiveRecord: 0.1ms | Allocations: 465)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:21:36 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 1ms (ActiveRecord: 0.1ms | Allocations: 465)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:21:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 204 No Content in 2ms (ActiveRecord: 0.2ms | Allocations: 465)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:10 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 35)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:11 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:29 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 229)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:29 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:36 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2116)
+
+
+  
+NameError (undefined local variable or method `recipe' for #<RecipesController:0x000000000348a0>
+Did you mean?  recipe_url):
+  
+app/controllers/recipes_controller.rb:23:in `show'
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:36 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:43 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 12ms (Views: 1.2ms | ActiveRecord: 2.3ms | Allocations: 6096)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:43 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:51 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 14ms (Views: 1.2ms | ActiveRecord: 3.3ms | Allocations: 6040)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:51 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:52 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 712)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:52 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/2" for ::1 at 2022-09-17 22:22:58 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 12ms (Views: 1.4ms | ActiveRecord: 2.1ms | Allocations: 6077)
+
+
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:22:58 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:27:20 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.59ms)
+Completed 200 OK in 11ms (Views: 1.6ms | ActiveRecord: 2.5ms | Allocations: 4308)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["user_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+Started GET "/recipes" for ::1 at 2022-09-17 22:29:01 -0400
+Processing by RecipesController#index as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "recipe"=>{}}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.79ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 2.8ms | Allocations: 6119)
+
+
+Started GET "/reviews" for ::1 at 2022-09-17 22:29:12 -0400
+Processing by ReviewsController#index as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "review"=>{}}
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 2.5ms | Allocations: 3560)
+
+
+Started GET "/recipes" for ::1 at 2022-09-17 22:29:21 -0400
+Processing by RecipesController#index as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.47ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.2ms | Allocations: 2603)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:29:34 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.25ms)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.1ms | Allocations: 827)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:29:51 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 10ms (Views: 2.7ms | ActiveRecord: 3.8ms | Allocations: 4295)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:30:06 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.66ms)
+Completed 200 OK in 19ms (Views: 1.5ms | ActiveRecord: 12.6ms | Allocations: 4347)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:30:13 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.8ms | Allocations: 4399)
+
+
+  
+NoMethodError (undefined method `first' for :review:Symbol):
+  
+app/controllers/recipes_controller.rb:23:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:30:18 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 14ms (Views: 4.8ms | ActiveRecord: 3.3ms | Allocations: 4328)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:33:40 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.5ms | Allocations: 6716)
+
+
+  
+NoMethodError (undefined method `+' for #<Recipe:0x00007fe7d04091a0>):
+  
+app/controllers/recipes_controller.rb:21:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:38:38 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.3ms | Allocations: 7965)
+
+
+  
+NoMethodError (undefined method `includes' for #<Recipe:0x00007fe7d00540f0>):
+  
+app/controllers/recipes_controller.rb:19:in `show'
+Started GET "/favicon.ico" for ::1 at 2022-09-17 22:38:38 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:40:32 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 2.9ms | Allocations: 6254)
+
+
+  
+NoMethodError (undefined method `includes' for #<Recipe:0x00007fe7d029d078>):
+  
+app/controllers/recipes_controller.rb:19:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:42:33 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:42:46 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.7ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.9ms | Allocations: 9617)
+
+
+  
+NameError (undefined local variable or method `recipe1' for #<RecipesController:0x000000000456a0>
+Did you mean?  recipe):
+  
+app/controllers/recipes_controller.rb:28:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:43:05 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 35ms (Views: 2.6ms | ActiveRecord: 13.9ms | Allocations: 8141)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:43:23 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:44:24 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" ORDER BY "recipes"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["recipe_id", 1], ["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:45:46 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/recipes_controller.rb:22: syntax error, unexpected '\n', expecting '='
+app/controllers/recipes_controller.rb:31: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:45:59 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 19ms (Views: 1.3ms | ActiveRecord: 3.4ms | Allocations: 4886)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:46:12 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 14ms (Views: 1.8ms | ActiveRecord: 7.6ms | Allocations: 4852)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:47:00 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.86ms)
+Completed 200 OK in 14ms (Views: 2.0ms | ActiveRecord: 2.4ms | Allocations: 4851)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:49:09 -0400
+  
+SyntaxError (/Users/daniel/Desktop/Code/Other/my-recipe-book-v2/app/controllers/recipes_controller.rb:28: syntax error, unexpected ':', expecting =>
+...ender json: recipe, :includes :reviews
+...                              ^
+):
+  
+app/controllers/recipes_controller.rb:28: syntax error, unexpected ':', expecting =>
+app/controllers/recipes_controller.rb:28: syntax error, unexpected ':', expecting =>
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:49:21 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 10ms (Views: 1.1ms | ActiveRecord: 2.7ms | Allocations: 4886)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:51:00 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.51ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 3.8ms | Allocations: 4838)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:51:09 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 16ms (Views: 1.4ms | ActiveRecord: 82.0ms | Allocations: 4851)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:51:22 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:28:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 22ms (Views: 7.6ms | ActiveRecord: 7.8ms | Allocations: 8311)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:51:36 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.6ms | Allocations: 6708)
+
+
+  
+NoMethodError (undefined method `+' for #<Recipe:0x00007fe7cdd391d8>):
+  
+app/controllers/recipes_controller.rb:28:in `show'
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:51:58 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.35ms)
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 3.0ms | Allocations: 4852)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:52:54 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (6.05ms)
+Completed 200 OK in 56ms (Views: 16.3ms | ActiveRecord: 10.9ms | Allocations: 9872)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-17 22:52:55 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-17 22:52:55 -0400
+Processing by RecipesController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mRecipe Load (8.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.22ms)
+Completed 200 OK in 33ms (Views: 23.9ms | ActiveRecord: 8.8ms | Allocations: 4949)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.36ms)
+Completed 200 OK in 99ms (Views: 2.5ms | ActiveRecord: 37.3ms | Allocations: 11175)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-09-17 22:53:22 -0400
+Started GET "/me" for 127.0.0.1 at 2022-09-17 22:53:22 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (1.2ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.8ms)
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 5.9ms | Allocations: 7911)
+
+
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.28ms)
+Completed 200 OK in 50ms (Views: 1.2ms | ActiveRecord: 15.1ms | Allocations: 5102)
+
+
+Started GET "/recipes/1" for ::1 at 2022-09-17 22:53:59 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"password"=>"[FILTERED]", "username"=>"", "id"=>"1", "recipe"=>{}}
+  [1m[36mRecipe Load (0.1ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+[active_model_serializers] Rendered RecipeSerializer with ActiveModelSerializers::Adapter::Attributes (0.33ms)
+Completed 200 OK in 13ms (Views: 1.9ms | ActiveRecord: 2.3ms | Allocations: 4859)
+
+
