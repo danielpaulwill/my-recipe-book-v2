@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
 
   def index
     recipes = Recipe.all
-    render json: recipes, include: [:reviews => { :include => :user }], status: :ok
+    render json: recipes, status: :ok
   end
 
   def show

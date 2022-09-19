@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import Recipe from './Recipe'
 
 function RecipeList() {
-  const [recipes, setRecipes] = useState()
+  const [recipes, setRecipes] = useState([])
   
   useEffect(() => {
     fetch("/recipes").then((res) => {
       if (res.ok) {
         res.json().then((res) => {
-          setRecipes(res)
+          console.log(res)
+          // setRecipes(res)
         });
       } else {
         res.json().then((err) => {

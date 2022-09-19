@@ -7,8 +7,6 @@ function Recipe({ recipe }) {
   // if (reviews.length > 0) {
     let recipeReviews = reviews?.map(review => <Review key={review.id} review={review} />)
     // }
-
-  console.log(reviews)
     
   return (
     <div className="recipeCard">

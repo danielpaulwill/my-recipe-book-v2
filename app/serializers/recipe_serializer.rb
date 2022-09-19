@@ -1,10 +1,6 @@
 class RecipeSerializer < ActiveModel::Serializer
-  attributes :id, :photo, :title, :description, :ingredients, :instructions, :category, :reviews [include: => { :users }]
+  attributes :id, :photo, :title, :description, :ingredients, :instructions, :category, :reviews
 
-  # def users
-  #   self.reviews.collect do |review|
-  #     { :user => review.user }
-  #   end
-  # end
-
+  has_many :reviews
+  has_many :users, through: :reviews
 end
