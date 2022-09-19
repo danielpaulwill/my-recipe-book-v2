@@ -10,8 +10,6 @@ function App() {
   
   let navigate = useNavigate()
 
-  console.log({ user })
-
   function goToLoginClick() {
     navigate('/login')
   }

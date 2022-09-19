@@ -19,7 +19,6 @@ function MainContainer({ setUser, user, goToLoginClick }) {
     fetch("/me").then((res) => {
       if (res.ok) {
       res.json().then((user) => {
-        console.log({user})
         setUser(user)
       });
       navigate('/recipes')

@@ -1,26 +1,32 @@
+import { useEffect, useState } from 'react'
 
 function Review({ review }) {
+  const [canEdit, setCanEdit] = useState(false)
+  const [reviewText, setReviewText] = useState(review.review_text)
 
+  function handleEditClick(e) {
+    e.preventDefault()
+    setCanEdit(canEdit => !canEdit)
+  }
 
-  // create_table "reviews", force: :cascade do |t|
-  //   t.integer "user_id"
-  //   t.integer "recipe_id"
-  //   t.string "review_text"
-  //   t.datetime "created_at", precision: 6, null: false
-  //   t.datetime "updated_at", precision: 6, null: false
-  // end
+  function handleEditType(e) {
+    setReviewText(e.target.value)
+  }
 
+  function handleChangeEdit(e) {
+    e.preventDefault()
+
+  }
 
 
   return (
     <div className="recipeCard">
-      <h3>Recipe: {review.recipe.title}</h3>
-      <h4>Review: {review.review_text}</h4>
-      {/* <h3>{review.title}</h3>
-      <img className="recipeImage" src={review.photo} />
-      <p><b>Category:</b> {review.category}</p>
-      <p><b>Ingredients List:</b> {review.ingredients}</p>
-      <p><b>Instructions:</b> {review.instructions}</p> */}
+      <h4>{review.user}</h4>
+      <p>{review.review_text}</p>
+      <form>
+        <input className={canEdit ? 'textInput' : 'noInput'} value={reviewText} type="text" onChange={handleEditType}>{}</input>
+        <button className="normalButton" onClick={canEdit ? handleChangeEdit : handleEditClick}>{canEdit ? 'Save Changes' : 'Edit Review'}</button>
+      </form>
     </div>
   );
 }
