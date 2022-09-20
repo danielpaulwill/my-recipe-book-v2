@@ -68,6 +68,12 @@
   flex-direction: column; */
 }
 
+.reviewCard {
+  border: solid 3px purple;
+  width: 100%;
+  text-align: center;
+}
+
 .recipeCardContainer {
   text-align: center;
   display: flex;

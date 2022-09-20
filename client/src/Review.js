@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 
-function Review({ review }) {
+function Review({ review, id, reviewUser }) {
   const [canEdit, setCanEdit] = useState(false)
-  const [reviewText, setReviewText] = useState(review.review_text)
+  const [reviewText, setReviewText] = useState(review)
 
   function handleEditClick(e) {
     e.preventDefault()
@@ -20,9 +20,9 @@ function Review({ review }) {
 
 
   return (
-    <div className="recipeCard">
-      <h4>{review.user}</h4>
-      <p>{review.review_text}</p>
+    <div className="reviewCard">
+      <h4>{reviewUser.username}</h4>
+      <p>{review}</p>
       <form>
         <input className={canEdit ? 'textInput' : 'noInput'} value={reviewText} type="text" onChange={handleEditType}>{}</input>
         <button className="normalButton" onClick={canEdit ? handleChangeEdit : handleEditClick}>{canEdit ? 'Save Changes' : 'Edit Review'}</button>

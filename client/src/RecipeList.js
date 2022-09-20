@@ -3,12 +3,12 @@ import Recipe from './Recipe'
 
 function RecipeList() {
   const [recipes, setRecipes] = useState([])
+  console.log({recipes})
   
   useEffect(() => {
     fetch("/recipes").then((res) => {
       if (res.ok) {
         res.json().then((res) => {
-          console.log(res)
           setRecipes(res)
         });
       } else {
