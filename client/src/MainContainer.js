@@ -65,7 +65,7 @@ function MainContainer({ setUser, user, goToLoginClick }) {
         // navigate('/game/play')
         // window.scrollTo(0, 0);
       } else {
-        res.json().then((err) => alert(err.errors))
+        res.json().then((err) => alert("Your username or password was incorrect. Please try again."))
       }
     });
   }

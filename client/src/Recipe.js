@@ -6,8 +6,6 @@ function Recipe({ recipe, user }) {
   const [revFormVis, setRevFormVis] = useState(false)
   const [reviewText, setReviewText] = useState()
 
-  console.log(reviews)
-
   let recipeReviews = reviews?.map(review => <Review key={review.id} review={review.review_text} id={review.id} reviewUser={review.user} user={user} />)
     
   function handleWriteReview(e) {

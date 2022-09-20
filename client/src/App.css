@@ -2,8 +2,8 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* width: 100vw; */
-  border: solid 3px red;
+  border-bottom: solid 1px #808080;
+  padding-bottom: 20px;
 }
 
 #logo {
@@ -25,11 +25,9 @@
 
 .navlinks {
   padding: 0 15px;
-  border: solid 3px turquoise;
 }
 
 #mainContainer {
-  border:solid 3px blue;
   width: 75vw;  
   margin: 0 auto;
 }
@@ -61,17 +59,19 @@
 }
 
 .recipeCard {
-  border: solid 3px red;
+  border: solid 1px #000;
   width: 24vw;
   text-align: center;
+  background-color: #B57048;
   /* display: flex;
   flex-direction: column; */
 }
 
 .reviewCard {
-  border: solid 3px purple;
+  border: solid 1px #000;
   width: 100%;
   text-align: center;
+  background-color: #Bbe4ea;
 }
 
 .recipeCardContainer {
@@ -85,7 +85,7 @@
 }
 
 .textInput {
-  border: 3px solid #000;
+  border: 1px solid #000;
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   margin: 0 auto;
@@ -103,8 +103,19 @@
 }
 
 .reviewForm {
-  border: 1px solid #808080;
+  border: 1px solid #545454;
   padding: 10px;
+}
+
+.recipeForm {
+  border: 1px solid #545454;
+  padding: 10px;
+  /* width: 50vw; */
+  /* align-self: center; */
+  text-align: center;
+  /* display: flex;
+  flex-direction: column; */
+
 }
 
 .editError {
@@ -113,4 +124,8 @@
 }
 
 .reviewText {
+}
+
+.centeredDiv {
+  text-align: center;
 }

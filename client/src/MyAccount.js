@@ -14,7 +14,7 @@ function MyAccount({ user }) {
   return (
     <div>
       <h4>Username:<br></br>{user.username}</h4>
-      <button>Delete User</button>
+      {/* <button>Delete User</button> */}
     </div>
   );
 }
