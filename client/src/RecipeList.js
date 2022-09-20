@@ -9,7 +9,7 @@ function RecipeList() {
       if (res.ok) {
         res.json().then((res) => {
           console.log(res)
-          // setRecipes(res)
+          setRecipes(res)
         });
       } else {
         res.json().then((err) => {
