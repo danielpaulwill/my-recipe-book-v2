@@ -95,3 +95,19 @@
 .noInput {
   display: none;
 }
+
+.reviewButton {
+  border: 3px solid #000;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.reviewForm {
+  border: 1px solid #808080;
+  padding: 10px;
+}
+
+.editError {
+  color: red;
+  font-size: 80%;
+}

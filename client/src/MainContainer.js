@@ -86,7 +86,7 @@ function MainContainer({ setUser, user, goToLoginClick }) {
       <Routes>
         <Route path='login' element={<Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />} />
         <Route path='signup' element={<SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />} />
-        <Route path='recipes' element={<RecipeList />} />
+        <Route path='recipes' element={<RecipeList user={user} />} />
         <Route path='account' element={<MyAccount user={user} />} />
       </Routes>
     </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Recipe from './Recipe'
 
-function RecipeList() {
+function RecipeList({ user }) {
   const [recipes, setRecipes] = useState([])
   console.log({recipes})
   
@@ -18,7 +18,7 @@ function RecipeList() {
       }});
     }, []);
     
-    let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} />)
+    let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} user={user} />)
     
     return (
       <div>
