@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
   def create
-    review = Review.create(user_id: params[:user_id], recipe_id: params[:recipe_id], review_text: params[:review_text])
+    review = Review.create(user_id: session[:user_id], recipe_id: params[:recipe_id], review_text: params[:review_text])
     if review.valid?
       render json: review, except: [:created_at, :updated_at], status: :created
     else

@@ -21,23 +21,24 @@ function Recipe({ recipe, user }) {
 
   function handleReviewCreate(e) {
     e.preventDefault()
-    // fetch('/reviews', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({
-    //     recipe_id: recipe.id,
-    //     review_text: reviewText,
-    // })})
-    // .then((res) => {
-    //   if (res.ok) {
-    //     res.json().then((data) => setUser(data));
-    //     navigate('/recipes')
-    //   } else {
-    //     res.json().then((err) => alert(err.errors))
-    //   }})
-
+    fetch('/reviews', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        recipe_id: recipe.id,
+        review_text: reviewText,
+    })})
+    .then((res) => {
+      if (res.ok) {
+        res.json().then((data) => {
+          setReviews([...reviews, data])
+          setRevFormVis(revFormVis => !revFormVis)
+        });
+      } else {
+        res.json().then((err) => alert(err.errors))
+      }})
   }
 
   return (
