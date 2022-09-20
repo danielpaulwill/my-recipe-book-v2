@@ -14,27 +14,48 @@ function Review({ review, id, reviewUser, user }) {
     }
   }
 
+  console.log({ id })
+
   function handleEditType(e) {
     setReviewText(e.target.value)
   }
 
   function handleChangeEdit(e) {
     e.preventDefault()
+    fetch(`/reviews/${id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        review_text: reviewText,
+      })
+    }).then((res) => res.json())
+      .then((data) => {
+        setReviewText(data.review_text)
+        setCanEdit(canEdit => !canEdit)
+      })
+  };
 
+  function handleDeleteClick(e) {
+    e.preventDefault()
+    fetch(`/reviews/${id}`, {
+      method: "DELETE" 
+    }).then((res) => console.log(res));
   }
 
 
   return (
     <div className="reviewCard">
       <h5>User: {reviewUser.username}</h5>
-      <p>{review}</p>
+      <p className={canEdit ? 'noInput' : 'reviewText'}>{reviewText}</p>
       <form className={canEdit ? 'reviewForm' : 'noInput'}>
-        <input className='textInput' value={reviewText} type="text" onChange={handleEditType}>{}</input>
-        <button className="reviewButton" onClick={canEdit ? handleChangeEdit : handleEditClick}>{canEdit ? 'Save Changes' : 'Edit Review'}</button>
+        <textarea className='textInput' value={reviewText} type="text" onChange={handleEditType}></textarea>
+        <button className="reviewButton" onClick={handleChangeEdit}>Save Changes</button>
         <br></br>
-        <button className='reviewButton'>Delete Review</button>
+        <button className='reviewButton' onClick={handleDeleteClick}>Delete Review</button>
       </form>
-      <button className={canEdit ? 'noInput' : 'normalButton'} onClick={canEdit ? handleChangeEdit : handleEditClick}>{canEdit ? 'Save Changes' : 'Edit Review'}</button>
+      <button className={canEdit ? 'noInput' : 'reviewButton'} onClick={handleEditClick}>Edit Review</button>
       <p className='editError'>{error}</p>
     </div>
   );

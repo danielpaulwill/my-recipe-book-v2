@@ -9,15 +9,38 @@ class ReviewsController < ApplicationController
     end
   end
 
-  def index
-    reviews = Review.all
-    render json: reviews
+  # def index
+  #   reviews = Review.all
+  #   render json: reviews
+  # end
+
+  # def show
+  #   user = User.find_by(id: session[:user_id])
+  #   user_reviews = user.reviews
+  #   render json: user_reviews
+  # end
+
+  def update
+    review = Review.find_by(id: params[:id])
+    if review
+      review.update(review_params)
+      render json: review
+    else
+      render json: { error: review.errors.full_messages }
+    end
   end
 
-  def show
-    user = User.find_by(id: session[:user_id])
-    user_reviews = user.reviews
-    render json: user_reviews
+  def destroy
+    review = Review.find_by(id: params[:id])
+    review.destroy
+    head :no_content
+  end
+
+
+  private
+
+  def review_params
+    params.permit(:review_text)
   end
 
 end
