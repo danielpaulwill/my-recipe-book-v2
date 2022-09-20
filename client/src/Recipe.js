@@ -6,6 +6,8 @@ function Recipe({ recipe, user }) {
   const [revFormVis, setRevFormVis] = useState(false)
   const [reviewText, setReviewText] = useState()
 
+  console.log(reviews)
+
   let recipeReviews = reviews?.map(review => <Review key={review.id} review={review.review_text} id={review.id} reviewUser={review.user} user={user} />)
     
   function handleWriteReview(e) {
@@ -18,7 +20,24 @@ function Recipe({ recipe, user }) {
   }
 
   function handleReviewCreate(e) {
-    console.log(e.target.value)
+    e.preventDefault()
+    // fetch('/reviews', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     recipe_id: recipe.id,
+    //     review_text: reviewText,
+    // })})
+    // .then((res) => {
+    //   if (res.ok) {
+    //     res.json().then((data) => setUser(data));
+    //     navigate('/recipes')
+    //   } else {
+    //     res.json().then((err) => alert(err.errors))
+    //   }})
+
   }
 
   return (
