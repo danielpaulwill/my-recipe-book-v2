@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 function Review({ review, id, reviewUser, user }) {
   const [canEdit, setCanEdit] = useState(false)
