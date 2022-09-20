@@ -3,7 +3,6 @@ import Recipe from './Recipe'
 
 function RecipeList({ user }) {
   const [recipes, setRecipes] = useState([])
-  console.log({recipes})
   
   useEffect(() => {
     fetch("/recipes").then((res) => {

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 
 function Review({ review, id, reviewUser, user }) {
   const [canEdit, setCanEdit] = useState(false)
+  const [reviewExists, setReviewExists] = useState(true)
   const [reviewText, setReviewText] = useState(review)
   const [error, setError] = useState('')
 
@@ -13,8 +14,6 @@ function Review({ review, id, reviewUser, user }) {
       setError('Only original reviewer can edit')
     }
   }
-
-  console.log({ id })
 
   function handleEditType(e) {
     setReviewText(e.target.value)
@@ -41,12 +40,15 @@ function Review({ review, id, reviewUser, user }) {
     e.preventDefault()
     fetch(`/reviews/${id}`, {
       method: "DELETE" 
-    }).then((res) => console.log(res));
+    }).then((res) => {
+      console.log(res)
+      setReviewExists(reviewExists => !reviewExists)
+    });
   }
 
 
   return (
-    <div className="reviewCard">
+    <div className={reviewExists ? "reviewCard" : "noInput"}>
       <h5>User: {reviewUser.username}</h5>
       <p className={canEdit ? 'noInput' : 'reviewText'}>{reviewText}</p>
       <form className={canEdit ? 'reviewForm' : 'noInput'}>
