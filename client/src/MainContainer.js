@@ -7,12 +7,6 @@ import MyAccount from './MyAccount';
 
 function MainContainer({ setUser, user, goToLoginClick }) {
   let navigate = useNavigate()
-  // const [errors, setErrors] = useState()
-  
-  // const login = <Login goToSignupClick={goToSignupClick} handleLoginClick={handleLoginClick} />
-  // const signUp = <SignUp handleSignupClick={handleSignupClick} goToLoginClick={goToLoginClick} />
-
-  // const [currentPage, setCurrentPage] = useState(signUp)
 
   // Auto-login
   useEffect(() => {
