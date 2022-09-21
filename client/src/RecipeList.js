@@ -31,9 +31,6 @@ function RecipeList({ user }) {
 
     function handleRecipeSubmit(e) {
       e.preventDefault()
-      console.log(e.target)
-
-
       fetch('/recipes', {
         method: 'POST',
         headers: {
@@ -50,8 +47,8 @@ function RecipeList({ user }) {
       .then((res) => {
         if (res.ok) {
           res.json().then((data) => {
-            // setReviews([...reviews, data])
-            // setRevFormVis(revFormVis => !revFormVis)
+            setRecipes([...recipes, data])
+            setRecipeFormVis(recipeFormVis => !recipeFormVis)
           });
         } else {
           res.json().then((err) => alert(err.errors))
@@ -78,7 +75,7 @@ function RecipeList({ user }) {
           <input placeholder='Recipe Description' onChange={e => setDescription(e.target.value)}></input>
             <br></br>
             <br></br>
-          <label for="category">Choose a Category</label>
+          <label>Choose a Category</label>
             <br></br>
           <select name="category" onChange={e => setCategory(e.target.value)}>
             <option value="">Please choose a category</option>

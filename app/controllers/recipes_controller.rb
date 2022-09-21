@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
 
   def create
-    recipe = Recipe.create(photo: params[:photo], title: params[:title], description: params[:description], ingredients: params[:ingredients], instructions: params[:instructions], category: params[:category])
+    recipe = Recipe.create(photo: params[:photo], title: params[:title], description: params[:description], ingredients: params[:ingredients], instructions: params[:instructions], category: params[:category], user_id: session[:user_id])
     if recipe.valid?
       render json: recipe, status: :created
     else
@@ -15,17 +15,10 @@ class RecipesController < ApplicationController
   end
 
   def show
-    recipe = Recipe.find_by(id: params[:id])
-    reviews = recipe.reviews
-    # byebug
-    # nested = recipe.reviews.each do |review|
-    #   recipe, review
-    # end
-    # reviews = recipe.reviews.all
-    # results = recipe + reviews
-
-    # if recipe
-    render json: recipe, include: :reviews
+    user = User.find_by(id: params[:id])
+    user_recipes = user.recipes
+    
+    render json: user_recipes
   end
 
 end
