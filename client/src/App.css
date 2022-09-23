@@ -23,10 +23,6 @@
   align-self: center;
 }
 
-.navlinks {
-  padding: 0 15px;
-}
-
 #mainContainer {
   width: 75vw;  
   margin: 0 auto;
@@ -63,8 +59,6 @@
   width: 24vw;
   text-align: center;
   background-color: #B57048;
-  /* display: flex;
-  flex-direction: column; */
 }
 
 .reviewCard {
@@ -89,7 +83,6 @@
   padding: 10px;
   font-family: 'Courier New', Courier, monospace;
   margin: 0 auto;
-  /* width: 250px; */
 }
 
 .noInput {
@@ -110,12 +103,7 @@
 .recipeForm {
   border: 1px solid #545454;
   padding: 10px;
-  /* width: 50vw; */
-  /* align-self: center; */
   text-align: center;
-  /* display: flex;
-  flex-direction: column; */
-
 }
 
 .editError {
@@ -128,4 +116,13 @@
 
 .centeredDiv {
   text-align: center;
+}
+
+nav a.active {
+  background-color: red;
+  text-decoration: none;
+}
+
+.navlinks {
+  padding: 0 15px;
 }

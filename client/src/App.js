@@ -19,7 +19,6 @@ function App() {
     <div className="App">
             <Navbar user={user} setUser={setUser} goToLoginClick={goToLoginClick} />
             <MainContainer setUser={setUser} goToLoginClick={goToLoginClick} user={user} />
-
     </div>
   );
 }

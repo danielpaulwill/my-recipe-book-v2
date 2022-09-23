@@ -10,11 +10,8 @@ function Navbar({ user, setUser, goToLoginClick }) {
       if (res.ok) {
         setUser('');
         navigate('/login')
-      }});
-  }
-
-
-
+      }})
+  };
 
   return (
     <div id="navbar">
@@ -26,12 +23,8 @@ function Navbar({ user, setUser, goToLoginClick }) {
         <button className="normalButton" onClick={(user === '') ? goToLoginClick : handleLogout}>{(user === '') ? 'Log In' : 'Log Out'}</button>
       </div>
       <div id="navigation">
-        {/* <p>Recipes</p> */}
         <NavLink
-          to="recipes" className='navlinks'
-          // style={({ isActive }) =>
-          //   isActive ? activeStyle : undefined
-          // }
+          to="recipes"
         >
           Recipes
         </NavLink>

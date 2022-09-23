@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Recipe from './Recipe';
 
 function MyAccount({ user }) {
   const [recipes, setRecipes] = useState()
@@ -33,14 +32,9 @@ function MyAccount({ user }) {
       </div>
   ))
 
-
-
-
-
   return (
     <div>
       <h4>Username:<br></br>{user.username}</h4>
-      {/* <button>Delete User</button> */}
       <h4>User's Recipes</h4>
       {recipeList}
     </div>

@@ -53,9 +53,7 @@ function RecipeList({ user }) {
         } else {
           res.json().then((err) => alert(err.errors))
         }})
-
-
-    }
+    };
     
     let theRecipes = recipes?.map(recipe => <Recipe key={recipe.id} recipe={recipe} user={user} />)
 

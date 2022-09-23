@@ -46,7 +46,6 @@ function Review({ review, id, reviewUser, user }) {
     });
   }
 
-
   return (
     <div className={reviewExists ? "reviewCard" : "noInput"}>
       <h5>User: {reviewUser.username}</h5>

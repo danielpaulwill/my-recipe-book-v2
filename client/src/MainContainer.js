@@ -16,14 +16,9 @@ function MainContainer({ setUser, user, goToLoginClick }) {
         setUser(user)
       });
       navigate('/recipes')
-      alert("Welcome back!");
     } else {
       res.json().then((err) => {
-        if (err.errors === undefined){
-          alert("")
-        } else {
         alert(err.errors)
-      }
     })}});
   }, []);
 
@@ -31,7 +26,6 @@ function MainContainer({ setUser, user, goToLoginClick }) {
   function handleSignupClick(username, password) {
     fetch('/users', {
       method: 'POST',
-      // mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
       },
@@ -62,8 +56,6 @@ function MainContainer({ setUser, user, goToLoginClick }) {
           setUser(user)
           navigate('/recipes')
         });
-        // navigate('/game/play')
-        // window.scrollTo(0, 0);
       } else {
         res.json().then((err) => alert("Your username or password was incorrect. Please try again."))
       }
@@ -73,7 +65,6 @@ function MainContainer({ setUser, user, goToLoginClick }) {
   function goToSignupClick() {
     navigate('/signup')
   }
-
 
   return (
     <div id='mainContainer'>
