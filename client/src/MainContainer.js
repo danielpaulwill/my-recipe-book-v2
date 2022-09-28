@@ -16,10 +16,7 @@ function MainContainer({ setUser, user, goToLoginClick }) {
         setUser(user)
       });
       navigate('/recipes')
-    } else {
-      res.json().then((err) => {
-        alert(err.errors)
-    })}});
+    }});
   }, []);
 
   // Sign up

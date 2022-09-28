@@ -26,7 +26,11 @@ function RecipeList({ user }) {
 
     function handleShowRecipe(e) {
       e.preventDefault()
-      setRecipeFormVis(recipeFormVis => !recipeFormVis)
+      if (user.id !== undefined) {
+        setRecipeFormVis(recipeFormVis => !recipeFormVis)
+      } else {
+        alert('Log in to create a recipe')
+      }
     }
 
     function handleRecipeSubmit(e) {

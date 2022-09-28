@@ -10,7 +10,11 @@ function Recipe({ recipe, user }) {
     
   function handleWriteReview(e) {
     e.preventDefault()
-    setRevFormVis(revFormVis => !revFormVis)
+    if (user.id !== undefined) {
+      setRevFormVis(revFormVis => !revFormVis)
+    } else {
+      alert('Log in to write a review')
+    }
   }
 
   function handleEditType(e) {
@@ -46,9 +50,10 @@ function Recipe({ recipe, user }) {
       <p><b>Category:</b> {recipe.category}</p>
       <p><b>Ingredients List:</b> {recipe.ingredients}</p>
       <p><b>Instructions:</b> {recipe.instructions}</p>
-      <button className={revFormVis ? 'noInput' : 'normalButton'} onClick={handleWriteReview} >Write Review</button>
+      <button className={revFormVis ? 'noInput' : 'normalButton'} onClick={handleWriteReview}>Write Review</button>
       <form className={revFormVis ? 'reviewForm' : 'noInput'}>
         <textarea className='textInput' type="text" onChange={handleEditType}></textarea>
+        <br></br>
         <button className="reviewButton" onClick={handleReviewCreate}>Save Review</button>
         <br></br>
         <button className='reviewButton' onClick={handleWriteReview}>Cancel</button>
