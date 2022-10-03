@@ -52,6 +52,7 @@ function Review({ review, id, reviewUser, user }) {
       <p className={canEdit ? 'noInput' : 'reviewText'}>{reviewText}</p>
       <form className={canEdit ? 'reviewForm' : 'noInput'}>
         <textarea className='textInput' value={reviewText} type="text" onChange={handleEditType}></textarea>
+        <br></br>
         <button className="reviewButton" onClick={handleChangeEdit}>Save Changes</button>
         <br></br>
         <button className='reviewButton' onClick={handleDeleteClick}>Delete Review</button>

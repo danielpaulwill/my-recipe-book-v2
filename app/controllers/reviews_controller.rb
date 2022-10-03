@@ -9,10 +9,10 @@ class ReviewsController < ApplicationController
     end
   end
 
-  # def index
-  #   reviews = Review.all
-  #   render json: reviews
-  # end
+  def index
+    reviews = Review.all
+    render json: reviews
+  end
 
   # def show
   #   user = User.find_by(id: session[:user_id])

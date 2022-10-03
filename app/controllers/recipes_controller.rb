@@ -16,9 +16,13 @@ class RecipesController < ApplicationController
 
   def show
     user = User.find_by(id: params[:id])
-    user_recipes = user.recipes
-    
-    render json: user_recipes
+    user_reviews = user.reviews
+    @recipes = []
+    for i in user_reviews do
+      @recipes << i.recipe
+     end
+
+    render json: @recipes
   end
 
 end
