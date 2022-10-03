@@ -35,8 +35,10 @@ function MyAccount({ user }) {
   return (
     <div>
       <h4>Username:<br></br>{user.username}</h4>
-      <h4>User's Recipes</h4>
-      {recipeList}
+      <h4>User's Reviewed Recipes</h4>
+      <div className='recipeCardContainer'>
+        {recipeList}
+      </div>
     </div>
   );
 }

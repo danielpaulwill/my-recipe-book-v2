@@ -25145,3 +25145,222 @@ Processing by RecipesController#show as */*
 Completed 200 OK in 566ms (Views: 421.8ms | ActiveRecord: 12.3ms | Allocations: 5240068)
 
 
+Started GET "/babel/parser/lib/index.js" for 127.0.0.1 at 2022-10-03 14:46:03 -0400
+Started GET "/recipes/1" for 127.0.0.1 at 2022-10-03 14:46:04 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/babel/parser/lib/index.js"):
+  
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+  [1m[36mRecipe Load (1.3ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+[active_model_serializers]   [1m[36mReview Load (1.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (374.96ms)
+Completed 200 OK in 1079ms (Views: 386.4ms | ActiveRecord: 31.6ms | Allocations: 11557277)
+
+
+Started GET "/me" for 127.0.0.1 at 2022-10-03 14:46:20 -0400
+Processing by UsersController#show as */*
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:14:in `show'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (8.78ms)
+Completed 200 OK in 45ms (Views: 20.2ms | ActiveRecord: 1.9ms | Allocations: 483291)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2022-10-03 14:46:20 -0400
+Processing by RecipesController#index as */*
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes"[0m
+  ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 2]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (2.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.1ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 4]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 6]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 7]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (2.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 8]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 9]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 10]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 11]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 12]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:14:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (708.75ms)
+Completed 200 OK in 759ms (Views: 735.4ms | ActiveRecord: 19.9ms | Allocations: 8431412)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2022-10-03 14:46:21 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+[active_model_serializers]   [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (359.58ms)
+Completed 200 OK in 488ms (Views: 363.1ms | ActiveRecord: 11.0ms | Allocations: 5242548)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2022-10-03 14:46:42 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+[active_model_serializers]   [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (1.0ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (1.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (385.42ms)
+Completed 200 OK in 514ms (Views: 389.1ms | ActiveRecord: 12.2ms | Allocations: 5243257)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2022-10-03 14:47:00 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+[active_model_serializers]   [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (2.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (0.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (376.43ms)
+Completed 200 OK in 514ms (Views: 381.6ms | ActiveRecord: 14.2ms | Allocations: 5242548)
+
+
+Started GET "/recipes/1" for 127.0.0.1 at 2022-10-03 14:47:45 -0400
+Processing by RecipesController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:18:in `show'
+  [1m[36mReview Load (2.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/recipes_controller.rb:21:in `show'
+  [1m[36mRecipe Load (2.4ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (1.0ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+  [1m[36mRecipe Load (0.9ms)[0m  [1m[34mSELECT "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/recipes_controller.rb:22:in `block in show'
+[active_model_serializers]   [1m[36mReview Load (1.4ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (3.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 5]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."recipe_id" = $1[0m  [["recipe_id", 3]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mUser Load (26.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers]   [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/recipes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (410.67ms)
+Completed 200 OK in 549ms (Views: 386.2ms | ActiveRecord: 41.9ms | Allocations: 5240004)
+
+

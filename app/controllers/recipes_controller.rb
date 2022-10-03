@@ -21,7 +21,6 @@ class RecipesController < ApplicationController
     for i in user_reviews do
       @recipes << i.recipe
      end
-
     render json: @recipes
   end
 
