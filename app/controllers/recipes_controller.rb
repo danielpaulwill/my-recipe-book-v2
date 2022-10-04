@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
 
   def create
+    return render json: { errors: "Not authorized, log in to create a recipe" }, status: :unauthorized unless session.include? :user_id
     recipe = Recipe.create(photo: params[:photo], title: params[:title], description: params[:description], ingredients: params[:ingredients], instructions: params[:instructions], category: params[:category], user_id: session[:user_id])
     if recipe.valid?
       render json: recipe, status: :created
