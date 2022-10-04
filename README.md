@@ -21,7 +21,7 @@ npm install --prefix client
 ```
 Once the apps dependencies are installed, run the following code to set up the database.
 ```
-rails db:create db:migrate
+rails db:create db:migrate db:seed
 ```
 The final step once setup is complete is to run the app. If running locally run the following command:
 ```
