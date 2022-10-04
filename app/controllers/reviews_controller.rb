@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-
+  
   def create
     review = Review.create(user_id: session[:user_id], recipe_id: params[:recipe_id], review_text: params[:review_text])
     if review.valid?
@@ -14,26 +14,26 @@ class ReviewsController < ApplicationController
     render json: reviews
   end
 
-  # def show
-  #   user = User.find_by(id: session[:user_id])
-  #   user_reviews = user.reviews
-  #   render json: user_reviews
-  # end
-
   def update
     review = Review.find_by(id: params[:id])
-    if review
+    user = User.find_by(id: session[:user_id])
+    if review.user_id == user.id
       review.update(review_params)
       render json: review
     else
-      render json: { error: review.errors.full_messages }
+      render json: { errors: "Not authorized, only original reviewer can edit" }, status: :unauthorized
     end
   end
 
   def destroy
     review = Review.find_by(id: params[:id])
-    review.destroy
-    head :no_content
+    user = User.find_by(id: session[:user_id])
+    if review.user_id == user.id
+      review.destroy
+      head :no_content
+    else
+      render json: { errors: "Not authorized, only original reviewer can delete" }, status: :unauthorized
+    end
   end
 
 

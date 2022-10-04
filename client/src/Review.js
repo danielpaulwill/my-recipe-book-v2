@@ -29,11 +29,15 @@ function Review({ review, id, reviewUser, user }) {
       body: JSON.stringify({
         review_text: reviewText,
       })
-    }).then((res) => res.json())
-      .then((data) => {
-        setReviewText(data.review_text)
-        setCanEdit(canEdit => !canEdit)
-      })
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((data) => {
+          setReviewText(data.review_text)
+          setCanEdit(canEdit => !canEdit)
+        });
+      } else {
+        res.json().then((err) => alert(err.errors))
+      }})
   };
 
   function handleDeleteClick(e) {
@@ -41,10 +45,15 @@ function Review({ review, id, reviewUser, user }) {
     fetch(`/reviews/${id}`, {
       method: "DELETE" 
     }).then((res) => {
-      console.log(res)
-      setReviewExists(reviewExists => !reviewExists)
-    });
-  }
+      if (res.ok) {
+        res.json().then((data) => {
+          console.log(data)
+          setReviewExists(reviewExists => !reviewExists)
+        });
+      } else {
+        res.json().then((err) => alert(err.errors))
+      }})
+  };
 
   return (
     <div className={reviewExists ? "reviewCard" : "noInput"}>
