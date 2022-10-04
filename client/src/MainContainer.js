@@ -16,7 +16,10 @@ function MainContainer({ setUser, user, goToLoginClick }) {
         setUser(user)
       });
       navigate('/recipes')
-    }});
+    } else {
+      navigate('/login')
+    }
+  });
   }, []);
 
   // Sign up

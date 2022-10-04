@@ -1,7 +1,8 @@
 class RecipesController < ApplicationController
+  before_action :authorize
+  skip_before_action :authorize, only: [:index, :sort, :show]
 
   def create
-    return render json: { errors: "Not authorized, log in to create a recipe" }, status: :unauthorized unless session.include? :user_id
     recipe = Recipe.create(photo: params[:photo], title: params[:title], description: params[:description], ingredients: params[:ingredients], instructions: params[:instructions], category: params[:category], user_id: session[:user_id])
     if recipe.valid?
       render json: recipe, status: :created
@@ -23,6 +24,17 @@ class RecipesController < ApplicationController
       @recipes << i.recipe
      end
     render json: @recipes
+  end
+
+  def sort
+    recipes = Recipe.all.order(:title).pluck(:title)
+    render json: recipes
+  end
+
+  private
+
+  def authorize
+    return render json: { errors: "Not authorized, log in to create a recipe" }, status: :unauthorized unless session.include? :user_id
   end
 
 end

@@ -22,6 +22,12 @@ function MyAccount({ user }) {
     }})};
   }, []);
 
+  function handleSort(e) {
+    fetch("/sort")
+    .then((res) => res.json())
+    .then((data) => console.log(data))
+      };
+
   let recipeList = recipes?.map(recipe => (
     <div className="recipeCard" key={recipe.id}>
         <h3>{recipe.title}</h3>
@@ -36,6 +42,7 @@ function MyAccount({ user }) {
     <div>
       <h4>Username:<br></br>{user.username}</h4>
       <h4>User's Reviewed Recipes</h4>
+      <button onClick={handleSort}>Console log sorted recipes</button>
       <div className='recipeCardContainer'>
         {recipeList}
       </div>

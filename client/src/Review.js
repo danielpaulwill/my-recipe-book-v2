@@ -43,16 +43,14 @@ function Review({ review, id, reviewUser, user }) {
   function handleDeleteClick(e) {
     e.preventDefault()
     fetch(`/reviews/${id}`, {
-      method: "DELETE" 
+      method: "DELETE",
+      headers: {
+        'Content-Type': 'application/json'
+      },
     }).then((res) => {
-      if (res.ok) {
-        res.json().then((data) => {
-          console.log(data)
+          console.log(res)
           setReviewExists(reviewExists => !reviewExists)
         });
-      } else {
-        res.json().then((err) => alert(err.errors))
-      }})
   };
 
   return (
